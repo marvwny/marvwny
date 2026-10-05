@@ -1,177 +1,79 @@
-Os caminhos absolutos são esses que você mesmo forneceu:
-
-/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/services/discord.service.js
-/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/core/websocket.js
-/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/routes/tokens.routes.js
-/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/services/verification.service.js
-/root/app_customizacao/Crimson_Protect_OpenBuild/dist-frontend/assets/verification-provider.js
-/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/electron/main.js
-Como obter o conteúdo:
-
-Abra o terminal ou navegador de arquivos
-Vá até /root/app_customizacao/Crimson_Protect_OpenBuild/
-Abra cada arquivo acima em um editor de texto (nano, vim, VS Code, ou cat)
-Copie todo o conteúdo (Ctrl+C / Selecionar tudo)
-Cole aqui no chat
-Ou use o terminal:
-
-bash
-cat /root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/services/discord.service.js
-cat /root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/core/websocket.js
-cat /root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/routes/tokens.routes.js
-Importante: Eu não tenho acesso ao seu sistema de arquivos. Você precisa copiar o conteúdo (o código dentro dos arquivos) e colar aqui para eu analisar.
-
-Me envie o conteúdo desses 3 primeiro: discord.service.js, websocket.js e tokens.routes.js.
 
 
-Aqui está o **Prompt de Contexto** completo para você salvar e usar caso a sessão seja interrompida:
+<br>
+<a href="#"><img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&color=292929&section=header"/></a>
 
----
+<a href="#"><img width="100%" src="https://readme-typing-svg.herokuapp.com?font=SUSE&size=30&pause=2000&color=FFFFFF&center=true&vCenter=true&width=1000&height=60&lines=Olá,+tudo+bem?+Me+chamo+Marvwn!;Seja+bem-vindo(a)+ao+meu+perfil."/></a>
 
-**PROMPT DE CONTEXTO - CRIMSON PROTECT CAPTCHA RELAY SYSTEM**
+<br><br>
+<hr style="border:1px solid #333333;">
+<br><br>
 
-**Projeto:** Crimson Protect 1.6.0 (Electron/React App para gerenciamento de contas Discord)  
-**Objetivo:** Implementar sistema de CAPTCHA Relay "Human-in-the-Loop" para operações de contas (join guild, etc) que requerem verificação hCaptcha/reCAPTCHA do Discord.  
-**Arquitetura:** Quando Discord API retorna erro 400 com `captcha_sitekey`, `captcha_rqdata`, `captcha_rqtoken`, o sistema deve pausar a operação, emitir evento WebSocket, renderizar widget hCaptcha na interface do usuário com os parâmetros do Discord, aguardar resolução manual, e reenviar a requisição com o token resolvido.
+<p align="center"><strong>Sobre Mim</strong></p>
 
----
+<div align="center">
+  <img src="https://images-ext-1.discordapp.net/external/qMdUtFcPebX8ybXSjbjbGEvr4MNp0opjFyqweSoqRJ4/%3Fsize%3D512/https/cdn.discordapp.com/avatars/726999575445110795/6dc5ecce7a86d1ad46ae5152f1a6d14d.webp?format=webp" width="150" style="border-radius: 50%; border: 2px solid #555555;"/>
+</div>
 
-**✅ O QUE JÁ FOI FEITO:**
+<br>
 
-**1. discord.service.js** (`/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/services/discord.service.js`)
-- **Status:** Modificado com sucesso
-- **Adições:**
-  - Método `requestWithVerification(operationId, endpoint, token, options)` que implementa o fluxo completo:
-    - Tenta requisição normal
-    - Se captcha detectado, chama `verificationManager.requestVerification()`
-    - Aguarda resolução (Promise)
-    - Reenvia com headers `X-Captcha-Key` e `X-Captcha-Rqtoken`
-  - Helpers `getAccountIdFromToken()` e `getOperationTypeFromEndpoint()`
-  - O método `request()` original permanece intacto (backward compatibility)
+<div align="center" style="background-color:#222222; padding:25px 30px; border-radius:15px; display:inline-block; max-width:550px; color:#e0e0e0; font-family:Arial, sans-serif;">
+  <table style="width:100%; border-collapse: collapse; color:#e0e0e0;">
+    <tr>
+      <td style="padding:4px 8px; vertical-align:top; font-weight:bold;">👤 Nome:</td>
+      <td style="padding:4px 8px;">XsadnessZ</td>
+    </tr>
+    <tr>
+      <td style="padding:4px 8px; vertical-align:top; font-weight:bold;">💼 Status:</td>
+      <td style="padding:4px 8px;">Editor & Criador de Conteúdo</td>
+    </tr>
+    <tr>
+      <td style="padding:4px 8px; vertical-align:top; font-weight:bold;">📚 Aprendendo:</td>
+      <td style="padding:4px 8px;">Programação Fullstack, Plugins Minecraft, Node.js, Python</td>
+    </tr>
+    <tr>
+      <td style="padding:4px 8px; vertical-align:top; font-weight:bold;">🛠 Habilidades:</td>
+      <td style="padding:4px 8px;">Cinematics para FiveM, Animações, Design Gráfico, Desenvolvimento de Servidores</td>
+    </tr>
+    <tr>
+      <td style="padding:4px 8px; vertical-align:top; font-weight:bold;">📍 Localização:</td>
+      <td style="padding:4px 8px;">Brasil 🇧🇷</td>
+    </tr>
+    <tr>
+      <td style="padding:4px 8px; vertical-align:top; font-weight:bold;">🎮 Hobbies:</td>
+      <td style="padding:4px 8px;">Criar conteúdo, programação, animação e edição de vídeos</td>
+    </tr>
+  </table>
+</div>
 
-**2. websocket.js** (`/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/core/websocket.js`)
-- **Status:** Modificado com sucesso  
-- **Adições:**
-  - Handlers para eventos:
-    - `verification:submit` (recebe token resolvido do frontend)
-    - `verification:cancel` (usuário cancelou)
-    - `verification:check` (consulta status)
-    - `verification:acknowledge` (confirmação de recebimento)
-  - Método `emitVerificationRequired()` para notificar frontend
-  - Método `handleVerificationSubmit()` para processar resposta
-  - Método `sendPendingVerifications()` para recuperação de sessão
-  - Suporte a `sessionId` na URL para vincular operações a sessões específicas
+<br><br>
+<hr style="border:1px solid #333333;">
+<br><br>
 
----
+<p align="center"><strong>Projetos em Destaque</strong></p>
 
-**⏳ O QUE FALTA FAZER:**
+<div align="center" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+  <a href="https://github.com/XsadnessZ/Servidor-Minecraft">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=XsadnessZ&repo=Servidor-Minecraft&theme=github_dark&border_radius=10&bg_color=1e1e1e" width="250"/>
+  </a>
+  <a href="https://github.com/XsadnessZ/Plugins-e-Tools">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=XsadnessZ&repo=Plugins-e-Tools&theme=github_dark&border_radius=10&bg_color=1e1e1e" width="250"/>
+  </a>
+</div>
 
-**Prioridade 1 - Backend (Node.js):**
+<br><br>
 
-**3. verification.service.js** 
-- **Caminho:** `/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/services/verification.service.js`
-- **O que fazer:** Criar/refatorar `VerificationManager` classe com:
-  - Máquina de estados: `CREATED` → `WAITING_FOR_VERIFICATION` → `VERIFICATION_PASSED` → `COMPLETED`
-  - Mapa de operações pendentes (`Map<operationId, PendingOperation>`)
-  - Método `requestVerification(operationId, data)` que:
-    - Registra operação pendente com TTL (5 minutos)
-    - Chama `wsManager.emitVerificationRequired()`
-    - Retorna Promise que resolve quando usuário confirmar
-  - Método `confirmVerification(operationId, result)` que:
-    - Atualiza estado para `VERIFICATION_PASSED`
-    - Resolve a Promise pendente com o token
-  - Método `cancelVerification(operationId)` e `expireVerification(operationId)`
-  - Deduplicação: garantir uma operação por `accountId + operationType`
-  - Cleanup automático de expirados (setInterval ou check periódico)
+<div align="center" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+  <a href="#"><img src="https://github-readme-stats.vercel.app/api?username=XsadnessZ&show_icons=true&hide_border=true&theme=github_dark&border_radius=10&bg_color=1e1e1e&card_width=500"/></a>
+  <a href="#"><img src="https://streak-stats.demolab.com/?user=XsadnessZ&hide_border=true&theme=github-dark-blue&border_radius=10&card_width=500"/></a>
+</div>
 
-**4. tokens.routes.js**
-- **Caminho:** `/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/routes/tokens.routes.js`
-- **O que fazer:** 
-  - Localizar endpoint de `joinGuild` (ou similar)
-  - Substituir chamada `discord.request()` por `discord.requestWithVerification()`
-  - Gerar `operationId` único (ex: `join-${accountId}-${guildId}-${timestamp}`)
-  - Passar `operationId`, `accountId`, `token` corretamente
+<br>
 
-**5. Constantes de Eventos**
-- **Caminho:** `/root/app_customizacao/Crimson_Protect_OpenBuild/dist-electron/server/config/constants.ts` (ou arquivo similar)
-- **Adicionar:**
-```javascript
-VERIFICATION: {
-  REQUIRED: 'verification:required',
-  SUBMIT: 'verification:submit',
-  CANCEL: 'verification:cancel',
-  CHECK: 'verification:check',
-  ACKNOWLEDGE: 'verification:acknowledge',
-  COMPLETED: 'verification:completed',
-  CANCELLED: 'verification:cancelled',
-  EXPIRED: 'verification:expired',
-  STATUS: 'verification:status',
-  ACCEPTED: 'verification:accepted'
-}
-```
+<p align="center" style="margin-top:15px;">
+  <a href="#"><img src="https://komarev.com/ghpvc/?username=xsadnessz&style=for-the-badge&label=Views:&color=555555"/></a>
+  <a href="#"><img src="https://custom-icon-badges.herokuapp.com/github/followers/xsadnessz?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follows&logoColor=white"/></a>
+</p>
 
-**Prioridade 2 - Frontend (React):**
-
-**6. verification-provider.js** (ou criar novo em src/)
-- **Caminho:** `/root/app_customizacao/Crimson_Protect_OpenBuild/dist-frontend/assets/verification-provider.js` (atual) ou `src/contexts/VerificationProvider.jsx` (recomendado)
-- **O que fazer:**
-  - Criar React Context `VerificationContext`
-  - Conectar ao WebSocket e escutar `verification:required`
-  - Estado global: `pendingOperations[]`, `activeOperation`
-  - Fila de operações (uma por vez na tela)
-  - Renderizar `<HCaptcha sitekey={...} customData={{rqdata: ...}} />` quando receber evento
-  - Callback `onVerify` envia `verification:submit` via WebSocket com `captchaKey`
-
-**7. Componente de Overlay/Modal**
-- Criar componente `VerificationOverlay.jsx`:
-  - Mostra conta afetada, tipo de operação, tempo restante (TTL)
-  - Botão "Cancelar" (emite `verification:cancel`)
-  - Botão "Verificar Status" (emite `verification:check`)
-  - Widget hCaptcha com os parâmetros do Discord (sitekey, rqdata)
-
-**8. App.jsx**
-- Adicionar `<VerificationProvider>` ao lado de outros providers
-- Garantir que está dentro do escopo do WebSocket
-
-**Prioridade 3 - Integração:**
-
-**9. Teste de Fluxo Completo:**
-- Conta tenta join → Discord retorna 400+captcha
-- Backend cria operação pendente → Emite WS
-- Frontend mostra modal → Usuário resolve hCaptcha
-- Frontend envia token → Backend reenvia request
-- Conta entra no servidor → Evento de completude
-
----
-
-**📋 NOTAS TÉCNICAS IMPORTANTES:**
-
-1. **Não confundir com Captcha antigo:** O sistema antigo (CaptchaManager) foi removido. Este é um sistema NOVO (VerificationManager) para CAPTCHA do Discord, não do próprio app.
-
-2. **Parâmetros do Discord:** O Discord usa `captcha_sitekey`, `captcha_rqdata`, `captcha_rqtoken`. O `rqdata` é essencial e deve ser passado para o widget hCaptcha via `customData={{rqdata: ...}}`.
-
-3. **Headers na reenvio:** Quando reenviar a requisição para Discord, usar:
-   - `X-Captcha-Key: <token_resolvido>`
-   - `X-Captcha-Rqtoken: <rqtoken_do_discord>`
-
-4. **Deduplicação:** Chave única para evitar duplicar operações: `${accountId}:${operationType}` (ex: `123:JOIN_GUILD`)
-
-5. **TTL:** 5 minutos (300000ms) para expiração automática. Cleanup a cada 60 segundos.
-
-6. **Session Recovery:** Quando frontend reconecta (refresh), deve receber imediatamente todas as operações pendentes via `sendPendingVerifications()`.
-
-7. **Segurança:** Nunca logar `captchaKey`, `rqdata`, ou tokens de resolução. Apenas logar `operationId` e `accountId`.
-
----
-
-**📁 ARQUIVOS PENDENTES PARA ANÁLISE:**
-Envie estes arquivos para continuar:
-1. `verification.service.js` (verificar se já existe algo ou criar do zero)
-2. `tokens.routes.js` (localizar onde está o joinGuild)
-3. `verification-provider.js` (verificar se é o antigo ou precisa criar novo em src/)
-
-**⚠️ ATENÇÃO:** O sistema de CAPTCHA relay está incompleto sem o `verification.service.js` funcionando. Este é o próximo arquivo crítico.
-
----
-
-**Para continuar:** Cole este prompt em uma nova sessão e envie o próximo arquivo (`verification.service.js`) para análise.
+<br>
+<a href="#"><img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&color=292929&section=footer"/></a>
