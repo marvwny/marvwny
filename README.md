@@ -12,7 +12,7 @@
 <p align="center"><strong>Sobre Mim</strong></p>
 
 <div align="center">
-  <img src="https://images-ext-1.discordapp.net/external/qMdUtFcPebX8ybXSjbjbGEvr4MNp0opjFyqweSoqRJ4/%3Fsize%3D512/https/cdn.discordapp.com/avatars/726999575445110795/6dc5ecce7a86d1ad46ae5152f1a6d14d.webp?format=webp" width="150" style="border-radius: 50%; border: 2px solid #555555;"/>
+  <img src="https://r2.fivemanage.com/nh5EF5q0a0bWIBmbXMwq0/crimsomlogo.png" width="150" style="border-radius: 50%; border: 2px solid #555555;"/>
 </div>
 
 <br>
